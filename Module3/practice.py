@@ -3,6 +3,11 @@ answer = 66
 # 終極密碼 讓使用者能夠重複猜數字，直到猜對為止
 while True:
 # 告訴使用者需要輸入的數字範圍 input()
+    try:
+        user_input = int(input("請輸入1~100的數字"))
+    except Exception as e:
+        print("請輸入數字")
+        continue
 # 超出範圍要顯示「超出範圍請重新輸入」
     user_input = int(input('請輸入1-100: '))
     if user_input < 1 or user_input > 100:
